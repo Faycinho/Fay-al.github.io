@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fayçal Ain-Lhout | Portfolio</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0f172a',
+                        cardBg: '#1e293b',
+                        accentBlue: '#38bdf8',
+                        accentHover: '#0ea5e9'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-darkBg text-slate-100 font-sans antialiased selection:bg-accentBlue selection:text-darkBg">
+
+    <!-- TOP NAVIGATION & LANGUAGE SWITCHER -->
+    <header class="sticky top-0 z-50 bg-darkBg/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-wider text-white">
+                FAYÇAL <span class="text-accentBlue">AIN-LHOUT</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-accentBlue transition" data-lang-en="About" data-lang-fr="À propos" data-lang-de="Über mich">About</a>
+                <a href="#experience" class="hover:text-accentBlue transition" data-lang-en="Experience" data-lang-fr="Expérience" data-lang-de="Erfahrung">Experience</a>
+                <a href="#cars" class="hover:text-accentBlue transition" data-lang-en="Automotive Projects" data-lang-fr="Projets Automobiles" data-lang-de="Automobilprojekte">Automotive Projects</a>
+                <a href="#beats" class="hover:text-accentBlue transition" data-lang-en="Music Production" data-lang-fr="Production Musicale" data-lang-de="Musikproduktion">Music Production</a>
+                <a href="#contact" class="hover:text-accentBlue transition" data-lang-en="Contact" data-lang-fr="Contact" data-lang-de="Kontakt">Contact</a>
+            </nav>
+            <!-- Language Switcher Buttons -->
+            <div class="flex items-center bg-cardBg border border-slate-700 rounded-lg p-1 text-xs font-semibold">
+                <button onclick="setLanguage('en')" id="btn-en" class="px-3 py-1.5 rounded-md bg-accentBlue text-darkBg transition font-bold">EN</button>
+                <button onclick="setLanguage('fr')" id="btn-fr" class="px-3 py-1.5 rounded-md text-slate-300 hover:text-white transition">FR</button>
+                <button onclick="setLanguage('de')" id="btn-de" class="px-3 py-1.5 rounded-md text-slate-300 hover:text-white transition">DE</button>
+            </div>
+        </div>
+    </header>
+    <!-- 
+         Hey there, inspector! 👋 
+         Thanks for checking out my source code. I really hope I get a chance to work with you—feel free to get in touch!
+    -->
+
+    <!-- HERO SECTION WITH LARGER PORTRAIT & INTRO -->
+    <section class="max-w-6xl mx-auto px-6 py-16 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+            <span class="inline-block px-3 py-1 bg-accentBlue/10 text-accentBlue border border-accentBlue/20 rounded-full text-xs font-semibold tracking-wider uppercase">
+                <span data-lang-en="Specialized Technician & Professional" data-lang-fr="Technicien Spécialisé & Professionnel" data-lang-de="Fachkraft & Techniker">Specialized Technician & Professional</span>
+            </span>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
+                <span data-lang-en="Hello, I'm" data-lang-fr="Bonjour, je suis" data-lang-de="Hallo, ich bin">Hello, I'm</span> <span class="text-accentBlue">Fayçal Ain-Lhout</span>
+            </h1>
+            <p class="text-slate-300 text-lg leading-relaxed" data-lang-en="Adaptable, highly organized, and detail-oriented professional with a Specialized Technician diploma in Computer Networks, combining technical precision with business acumen and creative passion." data-lang-fr="Professionnel adaptable, hautement organisé et soucieux du détail avec un diplôme de Technicien Spécialisé en réseaux informatiques, combinant rigueur technique, sens des affaires et passion créative." data-lang-de="Anpassungsfähiger, hochorganisierter und detailorientierter Fachmann mit einem Diplom als Fachinformatiker für Netzwerke, der technische Präzision mit kaufmännischem Geschick verbindet.">
+                Adaptable, highly organized, and detail-oriented professional with a Specialized Technician diploma in Computer Networks, combining technical precision with business acumen and creative passion.
+            </p>
+            <div class="flex flex-wrap gap-4 pt-2">
+                <a href="#contact" class="px-6 py-3 bg-accentBlue text-darkBg font-bold rounded-xl hover:bg-accentHover transition shadow-lg shadow-accentBlue/20" data-lang-en="Get in Touch" data-lang-fr="Me Contacter" data-lang-de="Kontaktieren Sie mich">Get in Touch</a>
+                <a href="#cars" class="px-6 py-3 bg-cardBg border border-slate-700 text-slate-200 font-semibold rounded-xl hover:border-slate-500 transition" data-lang-en="View Projects" data-lang-fr="Voir les Projets" data-lang-de="Projekte ansehen">View Projects</a>
+            </div>
+        </div>
+
+        <!-- Larger Portrait & Audio Slot -->
+        <div class="bg-cardBg border border-slate-800 p-8 rounded-3xl shadow-2xl relative flex flex-col items-center text-center">
+            <div class="relative w-56 h-72 mb-6 rounded-2xl overflow-hidden border-4 border-accentBlue/30 shadow-xl">
+                <img src="https://github.com/Faycinho/Cars/blob/main/Fay%C3%A7al%20T-shirt%20.jpg?raw=true" alt="Fayçal Ain-Lhout" class="w-full h-full object-cover object-top" ...> alt="Fayçal Ain-Lhout" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=500'">
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2" data-lang-en="Audio Introduction" data-lang-fr="Présentation Audio" data-lang-de="Audio-Vorstellung">Audio Introduction</h3>
+            <p class="text-sm text-slate-400 mb-6" data-lang-en="Listen to a quick personal presentation." data-lang-fr="Écoutez une courte présentation personnelle." data-lang-de="Hören Sie sich eine kurze persönliche Präsentation an.">Listen to a quick personal presentation.</p>
+            
+            <!-- Audio Player Slot -->
+            <div class="w-full bg-darkBg/60 border border-slate-700/60 p-4 rounded-xl">
+                <audio controls class="w-full">
+                    <source src="intro.mp3" type="audio/mpeg">
+                    <span data-lang-en="Your browser does not support the audio element." data-lang-fr="Votre navigateur ne supporte pas l'élément audio." data-lang-de="Ihr Browser unterstützt das Audio-Element nicht.">Your browser does not support the audio element.</span>
+                </audio>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT ME & MENTALITY -->
+    <section id="about" class="bg-cardBg/50 border-y border-slate-800 py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4" data-lang-en="About & Mentality" data-lang-fr="À Propos & Mentalité" data-lang-de="Über mich & Mentalität">About & Mentality</h2>
+                <p class="text-slate-400" data-lang-en="Core values, language proficiency, and technical foundations." data-lang-fr="Valeurs clés, maîtrise des langues et bases techniques." data-lang-de="Kernwerte, Sprachkenntnisse und technische Grundlagen.">Core values, language proficiency, and technical foundations.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-cardBg border border-slate-800 p-8 rounded-2xl">
+                    <div class="w-12 h-12 bg-accentBlue/10 text-accentBlue rounded-xl flex items-center justify-center text-xl font-bold mb-6">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3" data-lang-en="Education & IT" data-lang-fr="Formation & Informatique" data-lang-de="Ausbildung & IT">Education & IT</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed" data-lang-en="Specialized Technician diploma in Computer Networks from IFIAG, Rabat. Strong computer literacy, analytical abilities, and meticulous problem-solving skills." data-lang-fr="Diplôme de Technicien Spécialisé en réseaux informatiques d'IFIAG, Rabat. Solide culture informatique, compétences analytiques et résolution méthodique des problèmes." data-lang-de="Diplom als Fachinformatiker für Netzwerke von IFIAG, Rabat. Starke IT-Kenntnisse, analytische Fähigkeiten und strukturierte Problemlösung.">
+                        Specialized Technician diploma in Computer Networks from IFIAG, Rabat. Strong computer literacy, analytical abilities, and meticulous problem-solving skills.
+                    </p>
+                </div>
+
+                <!-- Card 2: Open-mindedness & Mentality -->
+                <div class="bg-cardBg border border-slate-800 p-8 rounded-2xl">
+                    <div class="w-12 h-12 bg-accentBlue/10 text-accentBlue rounded-xl flex items-center justify-center text-xl font-bold mb-6">
+                        <i class="fa-solid fa-earth-europe"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3" data-lang-en="Open-Minded & Cultural" data-lang-fr="Ouvert d'Esprit & Culturel" data-lang-de="Weltoffen & Kulturell">Open-Minded & Cultural</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed" data-lang-en="Deeply open-minded, highly adaptable to international environments, and passionate about discovering and connecting with all cultures." data-lang-fr="Profondément ouvert d'esprit, très adaptable aux environnements internationaux et passionné par la découverte et le partage de toutes les cultures." data-lang-de="Ausgesprochen weltoffen, hochgradig anpassungsfähig an internationale Umgebungen und leidenschaftlich daran interessiert, alle Kulturen kennenzulernen.">
+                        Deeply open-minded, highly adaptable to international environments, and passionate about discovering and connecting with all cultures.
+                    </p>
+                </div>
+
+                <!-- Card 3: Languages -->
+                <div class="bg-cardBg border border-slate-800 p-8 rounded-2xl">
+                    <div class="w-12 h-12 bg-accentBlue/10 text-accentBlue rounded-xl flex items-center justify-center text-xl font-bold mb-6">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3" data-lang-en="Languages" data-lang-fr="Langues" data-lang-de="Sprachen">Languages</h3>
+                    <ul class="space-y-2 text-slate-300 text-sm">
+                        <li class="flex justify-between border-b border-slate-800 pb-2"><span data-lang-en="Arabic (Native)" data-lang-fr="Arabe (Natif)" data-lang-de="Arabisch (Muttersprache)">Arabic (Native)</span><span class="text-accentBlue">100%</span></li>
+                        <li class="flex justify-between border-b border-slate-800 pb-2"><span data-lang-en="English (Fluent)" data-lang-fr="Anglais (Courant)" data-lang-de="Englisch (Fließend)">English (Fluent)</span><span class="text-accentBlue">70%</span></li>
+                        <li class="flex justify-between border-b border-slate-800 pb-2"><span data-lang-en="French (Fluent)" data-lang-fr="Français (Courant)" data-lang-de="Französisch (Fließend)">French (Fluent)</span><span class="text-accentBlue">75%</span></li>
+                        <li class="flex justify-between pt-1"><span data-lang-en="German (Intermediate)" data-lang-fr="Allemand (Intermédiaire)" data-lang-de="Deutsch (Mittelstufe)">German (Intermediate)</span><span class="text-accentBlue">50%</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORK EXPERIENCE -->
+    <section id="experience" class="max-w-6xl mx-auto px-6 py-20">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h2 class="text-3xl font-bold text-white mb-4" data-lang-en="Professional Experience" data-lang-fr="Expérience Professionnelle" data-lang-de="Berufserfahrung">Professional Experience</h2>
+            <p class="text-slate-400" data-lang-en="Administrative background, customer negotiations, and project execution." data-lang-fr="Parcours administratif, négociations clients et exécution de projets." data-lang-de="Hintergrund in Verwaltung, Kundenverhandlungen und Projektabwicklung.">Administrative background, customer negotiations, and project execution.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- IFIAG Assistant Experience -->
+            <div class="bg-cardBg border border-slate-800 p-8 rounded-2xl flex flex-col justify-between">
+                <div>
+                    <span class="text-accentBlue font-mono text-xs font-semibold">2023 - 2025</span>
+                    <h3 class="text-xl font-bold text-white mt-2 mb-1" data-lang-en="Internship Assistant" data-lang-fr="Assistant Stagiaire" data-lang-de="Praktikant / Assistent">Internship Assistant</h3>
+                    <p class="text-slate-400 text-sm mb-4">IFIAG — Rabat, Morocco</p>
+                    <ul class="space-y-2 text-slate-300 text-sm list-disc list-inside">
+                        <li data-lang-en="Assisted instructors and administrative staff with daily operations." data-lang-fr="Assistance aux instructeurs et au personnel administratif dans les opérations quotidiennes." data-lang-de="Unterstützung von Lehrkräften und Verwaltungspersonal im täglichen Betrieb.">Assisted instructors and administrative staff with daily operations.</li>
+                        <li data-lang-en="Supported organizational and office administration tasks." data-lang-fr="Soutien aux tâches organisationnelles et administratives." data-lang-de="Unterstützung bei organisatorischen und administrativen Aufgaben.">Supported organizational and office administration tasks.</li>
+                        <li data-lang-en="Collaborated professionally within multidisciplinary teams." data-lang-fr="Collaboration professionnelle au sein d'équipes pluridisciplinaires." data-lang-de="Professionelle Zusammenarbeit in multidisziplinären Teams.">Collaborated professionally within multidisciplinary teams.</li>
+                    </ul>
+                </div>
+                <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-slate-400">
+                    <i class="fa-solid fa-check text-accentBlue mr-2"></i><span data-lang-en="Admin & Team Coordination" data-lang-fr="Coordination Admin & Équipe" data-lang-de="Verwaltungs- & Teamkoordination">Admin & Team Coordination</span>
+                </div>
+            </div>
+
+            <!-- Vehicle Trader Experience -->
+            <div class="bg-cardBg border border-slate-800 p-8 rounded-2xl flex flex-col justify-between">
+                <div>
+                    <span class="text-accentBlue font-mono text-xs font-semibold">2022 - 2024</span>
+                    <h3 class="text-xl font-bold text-white mt-2 mb-1" data-lang-en="Independent Vehicle Trader" data-lang-fr="Négociant Automobile Indépendant" data-lang-de="Unabhängiger Fahrzeughändler">Independent Vehicle Trader</h3>
+                    <p class="text-slate-400 text-sm mb-4">Rabat, Morocco</p>
+                    <ul class="space-y-2 text-slate-300 text-sm list-disc list-inside">
+                        <li data-lang-en="Bought and sold used vehicles while managing negotiation processes." data-lang-fr="Achat et vente de véhicules d'occasion tout en gérant les négociations." data-lang-de="Ein- und Verkauf von Gebrauchtfahrzeugen bei gleichzeitiger Verhandlungsführung.">Bought and sold used vehicles while managing negotiation processes.</li>
+                        <li data-lang-en="Communicated directly with customers and organized inspections." data-lang-fr="Communication directe avec les clients et organisation des visites." data-lang-de="Direkte Kommunikation mit Kunden und Organisation von Besichtigungen.">Communicated directly with customers and organized inspections.</li>
+                        <li data-lang-en="Built strong customer service and bargaining skills." data-lang-fr="Renforcement du service client et des compétences de négociation." data-lang-de="Ausbau von Kundenservice und Verhandlungsgeschick.">Built strong customer service and bargaining skills.</li>
+                    </ul>
+                </div>
+                <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-slate-400">
+                    <i class="fa-solid fa-check text-accentBlue mr-2"></i><span data-lang-en="Negotiation & Dealmaking" data-lang-fr="Négociation & Transaction" data-lang-de="Verhandlung & Abschluss">Negotiation & Dealmaking</span>
+                </div>
+            </div>
+
+            <!-- Freelance Producer Experience -->
+            <div class="bg-cardBg border border-slate-800 p-8 rounded-2xl flex flex-col justify-between">
+                <div>
+                    <span class="text-accentBlue font-mono text-xs font-semibold">2019 - Present</span>
+                    <h3 class="text-xl font-bold text-white mt-2 mb-1" data-lang-en="Freelance Music Producer" data-lang-fr="Producteur Musical Freelance" data-lang-de="Freiberuflicher Musikproduzent">Freelance Music Producer</h3>
+                    <p class="text-slate-400 text-sm mb-4">Fiverr (Remote)</p>
+                    <ul class="space-y-2 text-slate-300 text-sm list-disc list-inside">
+                        <li data-lang-en="Produced custom music beats using FL Studio." data-lang-fr="Production de beats musicaux personnalisés sous FL Studio." data-lang-de="Produktion maßgeschneiderter Beats mit FL Studio.">Produced custom music beats using FL Studio.</li>
+                        <li data-lang-en="Collaborated with international clients entirely in English." data-lang-fr="Collaboration avec des clients internationaux entièrement en anglais." data-lang-de="Zusammenarbeit mit internationalen Kunden komplett auf Englisch.">Collaborated with international clients entirely in English.</li>
+                        <li data-lang-en="Managed client requests, revisions, and strict deadlines." data-lang-fr="Gestion des demandes clients, révisions et délais stricts." data-lang-de="Management von Kundenwünschen, Revisionen und Deadlines.">Managed client requests, revisions, and strict deadlines.</li>
+                    </ul>
+                </div>
+                <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-slate-400">
+                    <i class="fa-solid fa-check text-accentBlue mr-2"></i><span data-lang-en="Cross-cultural Remote Work" data-lang-fr="Travail à distance interculturel" data-lang-de="Interkulturelle Remote-Arbeit">Cross-cultural Remote Work</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AUTOMOTIVE PROJECTS -->
+    <section id="cars" class="bg-cardBg/50 border-y border-slate-800 py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4" data-lang-en="Automotive Trading & Restoration" data-lang-fr="Négoce & Restauration Automobile" data-lang-de="Automobilhandel & Restauration">Automotive Trading & Restoration</h2>
+                <p class="text-slate-400" data-lang-en="Practical mechanical troubleshooting, hands-on restoration, and vehicle trading." data-lang-fr="Dépannage mécanique pratique, restauration manuelle et négoce de véhicules." data-lang-de="Praktische mechanische Fehlersuche, manuelle Restauration und Fahrzeug Handel.">Practical mechanical troubleshooting, hands-on restoration, and vehicle trading.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- BMW E39 - Slot 1 -->
+                <div class="bg-cardBg border border-slate-800 rounded-2xl overflow-hidden shadow-lg flex flex-col">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://github.com/Faycinho/Cars/blob/main/BMWE39%20Side.JPG?raw=true" alt="BMW E39 523 1998" class="w-full h-full object-cover hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&q=80&w=600'">
+                        <span class="absolute top-3 left-3 bg-darkBg/80 backdrop-blur-md px-3 py-1 rounded-lg text-xs font-semibold text-accentBlue">BMW E39 (Pic 1)</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-2">BMW E39 523i (1998)</h3>
+                            <p class="text-slate-300 text-sm" data-lang-en="Hands-on mechanical restoration, seat rail troubleshooting, and maintenance work." data-lang-fr="Restauration mécanique pratique, dépannage des rails de sièges et entretien." data-lang-de="Praktische mechanische Restauration, Fehlersuche bei Sitzschienen und Wartungsarbeiten.">
+                                Hands-on mechanical restoration, seat rail troubleshooting, and maintenance work.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-800 text-xs font-mono text-slate-400">Status: Restored & Traded</div>
+                    </div>
+                </div>
+
+                <!-- BMW E39 - Slot 2 -->
+                <div class="bg-cardBg border border-slate-800 rounded-2xl overflow-hidden shadow-lg flex flex-col">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://github.com/Faycinho/Cars/blob/main/BMWE39%20Doors%20open.JPG?raw=true" alt="BMW E39 Interior/Angle" class="w-full h-full object-cover hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&q=80&w=600'">
+                        <span class="absolute top-3 left-3 bg-darkBg/80 backdrop-blur-md px-3 py-1 rounded-lg text-xs font-semibold text-accentBlue">BMW E39 (Pic 2)</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-2">BMW E39 523i (Angle & Details)</h3>
+                            <p class="text-slate-300 text-sm" data-lang-en="Second angle showcasing exterior finish, resourcefulness, and smart market trading." data-lang-fr="Second angle mettant en valeur la finition extérieure, la débrouillardise et le commerce malin." data-lang-de="Zweiter Blickwinkel, der die Außenlackierung und den cleveren Fahrzeughandel zeigt.">
+                                Second angle showcasing exterior finish, resourcefulness, and smart market trading.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-800 text-xs font-mono text-slate-400">Status: Deal Completed</div>
+                    </div>
+                </div>
+
+                <!-- Rover 400 - Slot -->
+                <div class="bg-cardBg border border-slate-800 rounded-2xl overflow-hidden shadow-lg flex flex-col">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://github.com/Faycinho/Cars/blob/main/Rover400.JPG?raw=true" alt="Rover 400 2000" class="w-full h-full object-cover hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=600'">
+                        <span class="absolute top-3 left-3 bg-darkBg/80 backdrop-blur-md px-3 py-1 rounded-lg text-xs font-semibold text-accentBlue">Rover 400 (2000)</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-2">Rover 400 (2000)</h3>
+                            <p class="text-slate-300 text-sm" data-lang-en="Budget trade project requiring negotiation, direct customer communication, and technical assessment." data-lang-fr="Projet de négoce économique nécessitant négociation, communication directe et évaluation technique." data-lang-de="Budget-Handelsprojekt, das Verhandlungen und technische Bewertung erforderte.">
+                                Budget trade project requiring negotiation, direct customer communication, and technical assessment.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-800 text-xs font-mono text-slate-400">Status: Successfully Traded</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MUSIC PRODUCTION BEATS SHOWCASE -->
+    <section id="beats" class="max-w-6xl mx-auto px-6 py-20">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h2 class="text-3xl font-bold text-white mb-4" data-lang-en="Music Production Showcase" data-lang-fr="Vitrine de Production Musicale" data-lang-de="Musikproduktions-Showcase">Music Production Showcase</h2>
+            <p class="text-slate-400" data-lang-en="Original beats produced using FL Studio." data-lang-fr="Beats originaux produits sous FL Studio." data-lang-de="Original-Beats, produziert mit FL Studio.">Original beats produced using FL Studio.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <!-- Beat Slot 1 -->
+            <div class="bg-cardBg border border-slate-800 p-6 rounded-2xl flex flex-col justify-between shadow-xl">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="w-10 h-10 bg-accentBlue/10 text-accentBlue rounded-xl flex items-center justify-center font-bold">01</span>
+                        <span class="text-xs font-mono text-slate-400">FL Studio Project</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-1" data-lang-en="Beat Slot 1: Instrumental Mix" data-lang-fr="Slot Beat 1 : Mix Instrumental" data-lang-de="Beat-Slot 1: Instrumental-Mix">Beat Slot 1: Instrumental Mix</h3>
+                    <p class="text-slate-400 text-sm mb-6" data-lang-en="Custom rhythm production and arrangement." data-lang-fr="Production de rythmes personnalisés et arrangement." data-lang-de="Benutzerdefinierte Rhythmusproduktion und Arrangement.">Custom rhythm production and arrangement.</p>
+                </div>
+                <div class="w-full bg-darkBg/60 border border-slate-700/60 p-3 rounded-xl">
+                    <audio controls class="w-full">
+                        <source src="https://github.com/Faycinho/Faycinho-Beats/raw/refs/heads/main/Quietly%20Numb.mp3" type="audio/mpeg">
+                        <span data-lang-en="Audio unsupported" data-lang-fr="Audio non pris en charge" data-lang-de="Audio nicht unterstützt">Audio unsupported</span>
+                    </audio>
+                </div>
+            </div>
+
+            <!-- Beat Slot 2 -->
+            <div class="bg-cardBg border border-slate-800 p-6 rounded-2xl flex flex-col justify-between shadow-xl">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="w-10 h-10 bg-accentBlue/10 text-accentBlue rounded-xl flex items-center justify-center font-bold">02</span>
+                        <span class="text-xs font-mono text-slate-400">FL Studio Project</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-1" data-lang-en="Beat Slot 2: Melodic Track" data-lang-fr="Slot Beat 2 : Piste Mélodique" data-lang-de="Beat-Slot 2: Melodischer Track">Beat Slot 2: Melodic Track</h3>
+                    <p class="text-slate-400 text-sm mb-6" data-lang-en="Atmospheric beat composition for international clients." data-lang-fr="Composition de beats atmosphériques pour clients internationaux." data-lang-de="Atmosphärische Beat-Komposition für internationale Kunden.">Atmospheric beat composition for international clients.</p>
+                </div>
+                <div class="w-full bg-darkBg/60 border border-slate-700/60 p-3 rounded-xl">
+                    <audio controls class="w-full">
+                        <source src="https://github.com/Faycinho/Faycinho-Beats/raw/refs/heads/main/COLD%20NIGHTS.mp3" type="audio/mpeg">
+                        <span data-lang-en="Audio unsupported" data-lang-fr="Audio non pris en charge" data-lang-de="Audio nicht unterstützt">Audio unsupported</span>
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT FOOTER -->
+    <footer id="contact" class="bg-cardBg border-t border-slate-800 py-16">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4" data-lang-en="Let's Work Together" data-lang-fr="Travaillons Ensemble" data-lang-de="Lassen Sie uns zusammenarbeiten">Let's Work Together</h2>
+            <p class="text-slate-400 max-w-xl mx-auto mb-8" data-lang-en="Looking for a versatile professional in technical support, operations, or administration? Get in touch!" data-lang-fr="À la recherche d'un professionnel polyvalent en support technique, opérations ou administration ? Contactez-moi !" data-lang-de="Auf der Suche nach einem vielseitigen Profi in IT, Support oder Administration? Kontaktieren Sie mich!">
+                Looking for a versatile professional in technical support, operations, or administration? Get in touch!
+            </p>
+            <div class="flex flex-wrap justify-center gap-6 mb-12 text-slate-300">
+                <a href="mailto:fayain777@gmail.com" class="flex items-center gap-2 px-5 py-3 bg-darkBg border border-slate-700 rounded-xl hover:border-accentBlue transition">
+                    <i class="fa-solid fa-envelope text-accentBlue"></i> fayain777@gmail.com
+                </a>
+                <a href="tel:+212652885443" class="flex items-center gap-2 px-5 py-3 bg-darkBg border border-slate-700 rounded-xl hover:border-accentBlue transition">
+                    <i class="fa-solid fa-phone text-accentBlue"></i> +212 652 885 443
+                </a>
+                <div class="flex items-center gap-2 px-5 py-3 bg-darkBg border border-slate-700 rounded-xl">
+                    <i class="fa-solid fa-location-dot text-accentBlue"></i> Rabat, Morocco
+                </div>
+            </div>
+            <p class="text-xs text-slate-500">&copy; 2026 Fayçal Ain-Lhout. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- MULTILINGUAL SWITCHER SCRIPT -->
+    <script>
+        function setLanguage(lang) {
+            ['en', 'fr', 'de'].forEach(l => {
+                const btn = document.getElementById(`btn-${l}`);
+                if (l === lang) {
+                    btn.className = "px-3 py-1.5 rounded-md bg-accentBlue text-darkBg transition font-bold";
+                } else {
+                    btn.className = "px-3 py-1.5 rounded-md text-slate-300 hover:text-white transition";
+                }
+            });
+
+            document.querySelectorAll('[data-lang-en]').forEach(el => {
+                const text = el.getAttribute(`data-lang-${lang}`);
+                if (text) {
+                    el.textContent = text;
+                }
+            });
+        }
+    </script>
+</body>
+</html>
